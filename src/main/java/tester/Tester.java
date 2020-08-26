@@ -21,6 +21,7 @@ public class Tester {
             em.persist(new Employee("klo999", "Irene", "Petersen", new BigDecimal(33567)));
             em.persist(new Employee("jik666", "Tian", "Wonnegut", new BigDecimal(56567)));
             em.getTransaction().commit();
+            
 
             Query query = em.createQuery("Select e FROM Employee e WHERE e.salary > 100000");
             List<Employee> result = query.getResultList();
